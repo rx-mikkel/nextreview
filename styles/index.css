@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import './settings.css';
+@import './dice.css';
+@import './deadlift.css';
+@import './squat.css';
+@import './lunge.css';
+@import './burpee.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+html {
+	background-color: #04010d;
+	color: #fff;
+}
+
+header {
+	height: 5rem;
+	max-height: 5rem;
+	background-color: #020008;
+}
+
+.band {
+    display: flex;
+    flex: 0 1;
+    justify-content: center;
+}
+
+.band .content {
+    display: flex;
+    flex: 1; 
+    flex-direction: column;
+    padding: 1em;
+    max-width: 72rem;
+}
+
+header.band .content {
+	align-items: end;
+	justify-content: center;
+}
+
+.settings {
+	background-color: #020008;
+	box-shadow: 0 12px 72px #02000888;
+}
+
+.settingsSection {
+	padding-bottom: 1rem;
+}
+
+.saveSettings {
+	justify-content: end;
+	display: flex;
+	flex: 0 1;
+}
+
+p, a {
+    line-height: 1.5em;
+}
+
+a, a:visited {
+    color: #024ca0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+.times {
+	font-weight: 100;
+	color: #860642;
+}
+
+.ice {
+	filter: blur(2.5px) grayscale(30%) brightness(130%);
+	opacity: .4;
+	transform: scale(.8);
+	pointer-events: none;
+}
+
+/* Button */
+
+button {
+	background-color: #04010d;
+	border: 2px solid #230236;
+	color: #fff;
+	padding: 1rem 1.5rem;
+	line-height: 1rem;
+	font-size: 1.5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: all .4s ease;
+
+	&.active {
+		border-color: #f1176a;
+		box-shadow: 0 0 5px #f1176a55, 0 1px 11px #f1176a33;
+		background: linear-gradient(90deg, #c40a2933 0%, #c40a2900 100%);
+	}
+}
+
+button:hover {
+	border-color: #3e0363;
+	background-color: #110225;
+}
+
+button.active:hover {
+	border-color: #f1176a;
+	background-color: #f1176a22;
+}
+
+.transparent {
+	opacity: 0;
+	cursor: default;
+}
+
+/* toggle */
+  
+input:where([type="checkbox"][role="switch"]) {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	position: relative;
+	color: #fff;
+	font-size: inherit;
+	width: 3.6em;
+	box-sizing: content-box;
+	border: 2px solid #6b0264;
+	border-radius: 2em;
+	vertical-align: text-bottom;
+	margin: auto;
+	display: flex;
+	transition: all .4s ease;
+	cursor: pointer;
+}
+
+input:where([type="checkbox"][role="switch"])::before {
+	content: "";
+	box-sizing: border-box;
+	width: 1.6em;
+	height: 1.6em;
+	margin: 2px;
+	border-radius: 50%;
+	background-image: radial-gradient(at 40% 40%, rgba(0,0,0,0) 25%, rgba(0,0,0,.25) 100%);
+	background-color: #6b0264;
+	transition: all .4s ease;
+}
+
+input:where([type="checkbox"][role="switch"]):checked {
+	border: 2px solid #e87431;
+	box-shadow: 0 0 4px rgba(232, 177, 49, 0.2), 0 1px 9px rgba(232, 177, 49, 0.1), inset 0 1px 2px rgba(232, 177, 49, 0.25);
+	background: linear-gradient(270deg, rgba(255,176,109,0.15) 0%, rgba(251,171,119,0) 80%);
+}
+
+input:where([type="checkbox"][role="switch"]):checked:before {
+	background-color: #ed831f;
+	box-shadow: 0 1px 3px rgba(232, 177, 49, 0.2), 0 1px 9px rgba(232, 177, 49, 0.1);
+	margin-left: 1.86em;
+}
+
+input:where([type="checkbox"][role="switch"]):disabled {
+	opacity: 0.4;
+	filter: grayscale(70%);
+}
+
+/* hr */
+
+hr {
+	opacity: 0.4;
+	background-color: #000;
+	border: none;
+	height: 2px;
+}
+
+/* workout */
+
+.workout .content {
+	transition: all .5s ease;
+}
+
+.workoutResult {
+	padding: 1rem 0;
+}
+
+.rounds {
+	padding: 0 2rem;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.rounds h2 {
+	font-size: 5rem;
+	color:#fff;
+	line-height: 1rem;
+}
+
+.wod {
+	background: linear-gradient(120deg, #230236af 8%, #f50a51af 100%);
+	padding: 2px;
+	border-radius: 0.5rem;
+	display: flex;
+}
+
+.exerciseList {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.wodEntry {
+	display: flex;
+	flex: 0 1;
+	align-items: center;
+	background-color: #040111ed;
+	padding: 1rem 2rem;
+	white-space: nowrap;
+}
+
+.wodEntry:first-of-type {
+	border-radius: 0 0.5rem 0 0;
+}
+
+.wodEntry:last-child {
+	border-radius: 0 0 0.5rem 0;
+}
+/*
+.wodEntry:nth-child(odd) {
+	background-color: #04010df0;
+}
+*/
+.wodEntry h4 {
+	font-size: 2rem;
+	margin-right: 1rem;
+	width: 4rem;
+	text-align: right;
+	margin: 1rem;
+}
+
+.wodEntry + .wodEntry {
+	margin-top: 2px;
+}
+
+.exercise {
+	display: flex;
+	align-items: center;
+	border: 2px solid #f16717;
+	border-radius: 0.25rem;
+	font-size: 1.8rem;
+	min-width: 24rem;
+	background-color: #04010d;
+
+	&.intensity1 {
+		border-color: #3f055a;
+		background: linear-gradient(90deg, #3f055a33 0%, #3f055a00 100%);
+	}
+
+	&.intensity2 {
+		border-color: #770562;
+		background: linear-gradient(90deg, #77056233 0%, #77056200 100%);
+	}
+
+	&.intensity3 {
+		border-color: #860642;
+		background: linear-gradient(90deg, #86064233 0%, #86064200 100%);
+	}
+
+	&.intensity4 {
+		border-color: #c40a29;
+		background: linear-gradient(90deg, #c40a2933 0%, #c40a2900 100%);
+	}
+}
+
+/* Training Avatars */
+
+.exercise-avatar {
+	display: flex;
+	width: 68px;
+	height: 68px;
+	justify-content: center;
+	margin-right: 1rem;
+}
+
+.exercise-avatar > div {
+	position: relative;
+	display: none;
+	filter: drop-shadow(0 0 4px #000000);
+}
+
+.head, .body, .arm, .leg, .barbell, .plate {
+	background-color: #c40a29;
+	position: absolute;
+}
+
+.intensity1 .head, .intensity1 .body, .intensity1 .arm, .intensity1 .leg  {
+	background-color: #3f055a;
+}
+
+.intensity2 .head, .intensity2 .body, .intensity2 .arm, .intensity2 .leg  {
+	background-color: #770562;
+}
+
+.intensity3 .head, .intensity3 .body, .intensity3 .arm, .intensity3 .leg  {
+	background-color: #860642;
+}
+
+.intensity4 .head, .intensity4 .body, .intensity4 .arm, .intensity4 .leg  {
+	background-color: #c40a29;
+}
+
+.head {
+	height: 12px;
+	width: 12px;
+	border-radius: 2rem;
+	transform: translate(-3px, -15px);
+}
+
+.body {
+	width: 6px;
+	height: 22px;
+	border-radius: 0.3rem;
+}
+
+.arm {
+	height: 12px;
+	width: 4px;
+	border-radius: 2px;
+}
+
+.left-arm, .right-arm {
+	transform-origin: 3px 1px;
+	left: -1px;
+}
+
+.underarm {
+	top: 10px;
+	transform-origin: 2px 2px;
+}
+
+.leg {
+	height: 16px;
+	width: 4px;
+	border-radius: 2px;
+}
+
+.left-leg, .right-leg {
+	left: 1px;
+	top: 18px;
+	transform-origin: 3px 1px;
+}
+
+.left-leg .lower-leg, .right-leg .lower-leg {
+	top: 12px;
+	transform-origin: 2px 2px;
+}
+
+.barbell {
+	width: 42px;
+	height: 2px;
+	display: none;
+	z-index: 2;
+}
+
+.plate {
+	width: 2px;
+	height: 10px;
+	top: -4px;
+	border: 1px;
+}
+
+.plate.left {
+	left: 2px;
+} 
+
+.plate.left-inner {
+	left: 5px;
+} 
+
+.plate.right-inner {
+	right: 5px;
+} 
+
+.plate.right {
+	right: 2px;
+} 
+
+.exercise-avatar .squat, .exercise-avatar .bbdeadlift, .exercise-avatar .lunge, .exercise-avatar .burpee {
+	display: flex;
+}
+
+.exercise p {
+	margin: 0;
+}
+
+@media screen and (max-width: 56rem) {
+	html {
+		font-size: 12px;
+	}
+
+	.wodEntry:first-of-type {
+		border-radius: 0;
+	}
+
+	.wodEntry:last-of-type {
+		border-radius: 0 0 0.5rem 0.5rem;
+	}
+}
+
+@media screen and (max-width: 40rem) {
+	.wod {
+		flex-direction: column;
+	}
+
+	.wodEntry {
+		padding: 1rem;
+	}
+
+	.exercise {
+		min-width: 20rem;
+		flex: 1;
+		font-size: 1.6rem;
+	}
+
+	.wodEntry + .wodEntry {
+		margin-top: 0;
+	}
+}
+
