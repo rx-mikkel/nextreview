@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 @import './settings.css';
-@import './dice.css';
-@import './deadlift.css';
-@import './squat.css';
-@import './lunge.css';
-@import './burpee.css';
 
 *,
 *::before,
@@ -25,20 +20,24 @@ html, body {
 }
 
 html {
-	background-color: #04010d;
+	background-color: #06021d;
 	color: #fff;
 }
 
 header {
 	height: 5rem;
 	max-height: 5rem;
-	background-color: #020008;
+	background-color: #06021d;
 }
 
 .band {
     display: flex;
     flex: 0 1;
     justify-content: center;
+}
+
+.band.light {
+	background-color: #fff;
 }
 
 .band .content {
