@@ -1,7 +1,7 @@
 {
-    "name": "Quick WOD",
-    "short_name" : "Quick WOD",
-    "start_url": "https://rx-mikkel.github.io/workout/",
+    "name": "Next Review",
+    "short_name" : "Next Review",
+    "start_url": "https://rx-mikkel.github.io/nextreview/",
     "scope" : "/",
     "icons": [
         {
@@ -19,5 +19,5 @@
     "background_color": "#04010d",
     "display": "standalone",
     "orientation": "any",
-    "description": "Get in shape"
+    "description": "Vi forbedrer dine kunderelationer"
  }
