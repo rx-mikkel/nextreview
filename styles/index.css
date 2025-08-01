@@ -33,6 +33,15 @@ header {
 
 footer {
 	background-color: #06021d93;
+	padding: 6rem 2rem;
+
+	h3 {
+		font-size: 2rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
 }
 
 .band {
