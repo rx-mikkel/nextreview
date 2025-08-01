@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
-@import './settings.css';
+@import './pricebox.css';
 
 *,
 *::before,
@@ -22,12 +22,15 @@ html, body {
 html {
 	background-color: #06021d;
 	color: #fff;
+	background: radial-gradient(circle,rgb(23, 8, 80) 40%, rgb(14, 2, 46) 77%, rgb(8, 0, 20) 100%);
 }
 
 header {
-	height: 5rem;
-	max-height: 5rem;
-	background-color: #06021d;
+	background-color: #06021d93;
+}
+
+footer {
+	background-color: #06021d93;
 }
 
 .band {
@@ -37,36 +40,36 @@ header {
 }
 
 .band.light {
-	background-color: #fff;
+	background-color: #fffffff1;
+	color: #230236;
 }
 
 .band .content {
     display: flex;
     flex: 1; 
     flex-direction: column;
-    padding: 1em;
-    max-width: 72rem;
+    padding: 4em 2em;
+    max-width: 96rem;
 }
 
-header.band .content {
-	align-items: end;
-	justify-content: center;
-}
-
-.settings {
-	background-color: #020008;
-	box-shadow: 0 12px 72px #02000888;
-}
-
-.settingsSection {
-	padding-bottom: 1rem;
-}
-
-.saveSettings {
-	justify-content: end;
+header .content {
 	display: flex;
-	flex: 0 1;
+    flex: 1;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+
+	h1 {
+		font-size: 1.6rem;
+		font-weight: 400;
+	}
 }
+
+footer .content {
+	justify-content: center;
+	padding: 2em;
+}
+
 
 p, a {
     line-height: 1.5em;
@@ -81,14 +84,6 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    font-size: 2.8em;
-}
-
-.times {
-	font-weight: 100;
-	color: #860642;
-}
 
 .ice {
 	filter: blur(2.5px) grayscale(30%) brightness(130%);
@@ -101,30 +96,59 @@ h1 {
 
 button {
 	background-color: #04010d;
-	border: 2px solid #230236;
+	background: linear-gradient(90deg, #026846 0%, #015e4e 100%);
+	border: none;
 	color: #fff;
-	padding: 1rem 1.5rem;
+	padding: 1rem 2rem;
 	line-height: 1rem;
-	font-size: 1.5rem;
-	border-radius: 0.5rem;
+	font-size: 1rem;
+	border-radius: 0.25rem;
 	cursor: pointer;
-	transition: all .4s ease;
+	opacity: .84;
+	transition: all .25s ease;
+	overflow: hidden;
+	position: relative;
+	text-shadow: 0 0 2px #000;
+}
 
-	&.active {
-		border-color: #f1176a;
-		box-shadow: 0 0 5px #f1176a55, 0 1px 11px #f1176a33;
-		background: linear-gradient(90deg, #c40a2933 0%, #c40a2900 100%);
+.shine {
+	content: "";
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	border-radius: inherit;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: inherit;
+	background: linear-gradient(-115deg, 
+		transparent 25%, 
+		rgba(207, 207, 207, 0.25) 26%, 
+		transparent 32% 
+		),
+		linear-gradient(-115deg, 
+		transparent 25%, 
+		rgba(255, 255, 255, 0.123) 35%, 
+		transparent 48% 
+	);
+	background-size: 400% 800%, 400% 1200%;
+	filter: blur(6px);
+	transition: all 150ms ease-in-out 0s;
+	background-blend-mode: color-burn, overlay;
+	mix-blend-mode: color-dodge;
+	z-index: 0;
+	animation: buttonGradientMove 11s infinite;
+	animation-play-state: running;
+}
+
+@keyframes buttonGradientMove {
+	50% {
+		background-position: 100% 0, 100% 0;
 	}
 }
 
 button:hover {
-	border-color: #3e0363;
-	background-color: #110225;
-}
-
-button.active:hover {
-	border-color: #f1176a;
-	background-color: #f1176a22;
+	opacity: 1;
 }
 
 .transparent {

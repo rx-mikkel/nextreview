@@ -1,0 +1,60 @@
+.priceboxContainer {
+    display: flex;
+    flex: 1;
+}
+
+.pricebox {
+    background-color: #fff;
+    background: linear-gradient(135deg, #ffffffe1 0%, #c9f3ded2 100%);
+    border-radius: .5rem;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: #230236;
+    box-shadow: 0px 11px 28px #0000009f;
+
+    &.t1 {
+        background: linear-gradient(135deg, #ffffffe1 0%, #aae7c9d2 100%);
+
+        .price {
+            color: #04533c;
+        }
+    }
+
+    &.t2 {
+        background: linear-gradient(135deg, #ffffffe1 0%, #bdc2f0d2 100%);
+
+        .price {
+            color: #080f6d;
+        }
+    }
+
+    &.t3 {
+        background: linear-gradient(135deg, #ffffffe1 0%, #b086e6d2 100%);
+
+        .price {
+            color: #4d047e;
+        }
+    }
+
+
+    li {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .pricetextContainer {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    .price {
+        font-size: 3.2rem;
+        color: #04533c;
+        margin: 1rem;
+        text-shadow: 0px 1px 4px #00000067;
+    }
+}
