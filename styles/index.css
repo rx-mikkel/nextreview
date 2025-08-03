@@ -29,6 +29,7 @@ html {
 header {
 	background-color: #06021df6;
 	position: sticky;
+	z-index: 100;
 	top: 0;
 
 	.logo {

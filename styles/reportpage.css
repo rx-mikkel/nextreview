@@ -41,3 +41,35 @@
         font-size: 0.7rem;
     }
 }
+
+.reportPageContent {
+    padding: 1rem;
+}
+
+.reportPageColumns {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.ratingSpeedometer {
+    width: 124px;
+    height: 124px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(from 144deg, transparent 0%, rgba(255, 255, 255, 0) 20%, #b97144 20%, #b97144 35.5%, #fff 36%, #d39a64 36.5%, #d39a64 51.5%, #fff 52%, #d8d168 52.5%, #d8d168 67.5%, #fff 68%, #9db85e 68.5%, #9db85e 83.5%, #fff 84%, #5a8f53 84.5%, #5a8f53 92.6%, transparent 92.6%);
+}
+
+.ratingSpeedometerInner {
+    background-color: #fff;
+    width: 70%;
+    height: 70%;
+    border-radius: 100px;
+    box-shadow: 0px 0px 5px #0000003f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
