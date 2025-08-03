@@ -3,19 +3,7 @@
     "short_name" : "Next Review",
     "start_url": "https://rx-mikkel.github.io/nextreview/",
     "scope" : "/",
-    "icons": [
-        {
-            "src": "./images/wod_192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "./images/wod_512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#860642",
+    "theme_color": "#230236",
     "background_color": "#04010d",
     "display": "standalone",
     "orientation": "any",
