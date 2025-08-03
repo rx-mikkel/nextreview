@@ -26,9 +26,25 @@ html {
 }
 
 header {
-	background-color: #06021de8;
+	background-color: #06021df6;
 	position: sticky;
 	top: 0;
+
+	.logo {
+		display: inline-block;
+		width: 48px;
+		margin-right: 1rem;
+	}
+
+	img {
+		max-width: 100%;
+		transform: rotate(35deg);
+	}
+
+	.identity {
+		display: flex;
+		align-items: center;
+	}
 }
 
 footer {
@@ -73,6 +89,7 @@ header .content {
 	h1 {
 		font-size: 1.6rem;
 		font-weight: 400;
+		display: inline-block;
 	}
 }
 
@@ -107,7 +124,7 @@ a:hover {
 
 button {
 	background-color: #04010d;
-	background: linear-gradient(90deg, #026846 0%, #015e4e 100%);
+	background: linear-gradient(270deg, #683f02 0%, #c59719 100%);
 	border: none;
 	color: #fff;
 	padding: 1rem 2rem;
