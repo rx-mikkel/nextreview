@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 @import './pricebox.css';
+@import './reportpage.css';
 
 *,
 *::before,
@@ -69,6 +70,8 @@ footer {
 .band.light {
 	background-color: #fffffff1;
 	color: #230236;
+	box-shadow: 0px 0px 16px #00000042;
+	position: relative;
 }
 
 .band .content {
@@ -98,6 +101,27 @@ footer .content {
 	padding: 2em;
 }
 
+.splashMessage {
+	max-width: 520px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+
+	h2 {
+		font-size: 1.8rem;
+	}
+}
+
+.contentColumns {
+	display: flex;
+	flex: 1;
+	gap: 2rem;
+
+	.contentColumn {
+		display: flex;
+		flex: 1;
+	}
+}
 
 p, a {
     line-height: 1.5em;

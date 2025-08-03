@@ -1,0 +1,43 @@
+.reportPage {
+    background-color: #ffffffc4;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffffe0 100%);
+    width: 100%;
+    height: 16rem;
+    margin-bottom: -4rem;
+    border-radius: 2px 2px 0px 0px;
+    overflow: hidden;
+    color: #230236c4;
+    opacity: 0.84;
+    padding: 1rem;
+}
+
+.reportPageHeader {
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.75;
+
+    > div {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 32px;
+        transform: rotate(35deg);
+        display: inline-block;
+        margin-right: 0.8rem;
+        opacity: 0.8;
+    }
+    
+    h4 {
+        font-weight: 400;
+        display: inline-block;
+        font-size: 0.8rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+}
