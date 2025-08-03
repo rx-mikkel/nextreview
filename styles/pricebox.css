@@ -17,15 +17,15 @@
     position: relative;
 
     &.t1 {
-        background: linear-gradient(135deg, #ffffffe1 0%, #aae7c9d2 100%);
+        background: linear-gradient(135deg, #ffffffe1 0%, #aadee7d2 100%);
 
         .price {
-            color: #04533c;
+            color: #023a44;
         }
 
         .nameSnip {
-            background-color: #04533c;
-            background: linear-gradient(135deg, #04533c 0%, #01251b 100%);
+            background-color: #044a53;
+            background: linear-gradient(135deg, #044353 0%, #011825 100%);
         }
     }
 
@@ -38,7 +38,7 @@
 
         .nameSnip {
             background-color: #080f6d;
-            background: linear-gradient(135deg, #080f6d 0%, #02063d 100%);
+            background: linear-gradient(135deg, #0b1380 0%, #02063d 100%);
         }
     }
 
